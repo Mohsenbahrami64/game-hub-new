@@ -4,6 +4,7 @@ import GameCart from "./GameCart";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
 import { Genre } from "../hooks/useGenre";
+import PlatformSelecter from "./PlatformSelecter";
 
 interface Props {
   selectedGenre: Genre | null;
@@ -23,7 +24,6 @@ const GameGrid = ({ selectedGenre }: Props) => {
         {isLoading &&
           skeletons.map((skeleton) => (
             <GameCardContainer>
-              {" "}
               <GameCardSkeleton key={skeleton} />
             </GameCardContainer>
           ))}
